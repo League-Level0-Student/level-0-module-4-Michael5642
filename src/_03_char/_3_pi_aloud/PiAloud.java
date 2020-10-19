@@ -3,6 +3,8 @@ package _03_char._3_pi_aloud;
 import java.io.IOException;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class PiAloud {
 	/***********  SOUND ***************
 	 * Some computers are unable to play sounds. 
@@ -11,28 +13,56 @@ public class PiAloud {
 	 * *****************/
 	boolean canPlaySounds = true;
 	
-	
+	public static void main(String[] args) {
 	// 1. Make a main method and make sure your program can run
 
 	// 2. Make a String variable to hold 20 digits of Pi. You could use http://www.piday.org/million/ to get this.
-
+String pie = "3.14159265359";
 	// 3. Print out 3 digits of Pi. The first value is "pi.charAt(0)", the second is "pi.charAt(1)"
 	// Check the console shows 3.1
-
+/*System.out.println(pie.charAt(0)+pie.charAt(1)+pie.charAt(2));
 	// 4. Print ALL the digits of the Pi String, putting each digit on a new line  (hint: use a loop)
+int loo = 0;
+for (int i = 0; i < pie.length(); i++) {
+	System.out.println(pie.charAt(loo));
+	loo = loo+1;
+}*/
 
 	// 5. Skip this step if your computer cannot play sounds. 
 	//		if (canPlaySounds) {
 	//				 Use the speak() method to speak each digit of Pi.   
 	//		}
 	
-	
+
 	// [CHALLENGE]
 	// *6. Get a character from the user using the getInputFromUser() method
+	
 	// *7. Compare the users' char to the next digit of Pi
-	// *8. If they are correct, print out "correct". If they are not, print "incorrect" 
-	
-	
+	// *8. If they are correct, print out "correct". If they are not, print "incorrect"
+
+int score = 0;
+int boom = 0;
+JOptionPane.showMessageDialog(null, "name as many numbers of pi as possible");
+for (int i = 0; i < pie.length(); i++) {
+	//numbers of pie
+	char boo = pie.charAt(boom);
+	String booer = String.valueOf(boo);
+	//input from user
+	char plush = getInputFromUser();
+	String plushie = String.valueOf(plush);
+	if(booer.equalsIgnoreCase(plushie)) {
+		JOptionPane.showMessageDialog(null, "correct!");
+		boom = boom + 1;
+		score = score + 1;
+	}
+	else {
+		JOptionPane.showMessageDialog(null, "incorrect...");
+		boom = boom + 1;
+		
+		}
+	}
+JOptionPane.showMessageDialog(null, "Out of " + pie.length() + " you scored: " + score);
+}	
 	
 	/********************  Use these methods. DON'T CHANGE THE CODE BELOW  ******************/
 
@@ -67,6 +97,7 @@ public class PiAloud {
 		Scanner scanner = new Scanner(System.in);
 		return scanner.next().toCharArray()[0];
 	}
+	
 
 }
 
