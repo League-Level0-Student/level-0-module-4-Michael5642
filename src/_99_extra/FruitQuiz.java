@@ -14,9 +14,9 @@ public class FruitQuiz extends KeyAdapter {
 	void makeQuestions() {
 		question1 = new JLabel("<html>Which is not a real fruit? <br> A: Dragon Fruit <br> B: Durian <br> C: Crazyberry</html>");
 		// 11. Make another question called "question2".  Use question1 above as a guide.
-		question2 = new JLabel("<html>....<br>...<br>...<br>...");
-		question3 = new JLabel("<html>....<br>...<br>...<br>...");
-		question4 = new JLabel("<html>....<br>...<br>...<br>...");
+		question2 = new JLabel("<html>how many battles has one punch man lost?<br>none<br>1<br>he lost?");
+		question3 = new JLabel("<html>which of these is from naruto?<br>ostridge rival<br>rubber body<br>nyoibo");
+		question4 = new JLabel("<html>which of these is acetic acid?<br>CH4COO<br>HC2H3O2<br>CH3COO");
 	}
 
 	@Override
